@@ -13,4 +13,7 @@ class Post(models.Model):
         # pk는 post의 id,  id를 title로 출력 
         return f'[{self.pk}]{self.title}'
     
+    def get_absolute_url (self):
+        return f'/blog/{self.pk}'
+    
 # Create your models here.
