@@ -8,6 +8,7 @@
 <html>
 <head>
     <title>about me</title>
+    <meta charset="utf-8" />
     <link href="{% static 'blog/bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
 
     <meta charset="utf-8" />
@@ -25,8 +26,8 @@
 
 
                 <a class="navbar-brand"> 
-                    <img src="./images_blog/logo.png", width="60px" height="60px"> 
-                    <a style="color:white"> <h3><strong>Django Test &nbsp&nbsp</strong></h3> </a>
+                    <img src="/media/blog/logo.png", width="60px" height="60px"> 
+                    <a style="color:white"> <h3><strong>Best One AI &nbsp&nbsp</strong></h3> </a>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -125,11 +126,11 @@
                 {% for p in post_list %}
                 <!-- 가장 큰 포스트 -->
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                    <a href="#!"><img class="card-img-top" src="/media/{{p.head_image}}" alt="..." /></a>
                     <div class="card-body">
                         <div class="small text-muted">{{p.updated_at}}</div>
                         <h2 class="card-title">{{p.title}}</h2>
-                        <p class="card-text">{{p.content}}</p>
+                        <p class="card-text">{{p.content}}media/{{p.head_image}}</p>
                         <a class="btn btn-primary" href="{{p.get_absolute_url}}">Read more →</a>
                     </div>
                 </div>
